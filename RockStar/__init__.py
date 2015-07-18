@@ -10,19 +10,19 @@ import git
 from progress.bar import Bar
 
 
-hello_world_c = """#include <iostream>
-int main()
-{
-  std::cout << "Hello World!";
-}"""
+hello_world_rb = """
+def hello
+  puts "Hello world"
+end
+"""
 
-default_file_name = 'main.cpp'
+default_file_name = 'main.rb'
 
 
 class RockStar:
 
     def __init__(self, days=400, file_name=default_file_name,
-                 code=hello_world_c):
+                 code=hello_world_rb):
         self.days = days
         self.file_name = file_name
         self.file_path = os.path.join(os.getcwd(), file_name)
